@@ -5,7 +5,7 @@ $(document).ready(function(){
 		var lowerCaseText = $('.js-text').val().toLowerCase();
 		var noPunctuation = lowerCaseText.replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g,"");
 		var wordArray = noPunctuation.split(' ');
-		var sentenceArray = lowerCaseText.split('. ');
+		var sentenceArray = lowerCaseText.split(/[.!?]/g);
 		var uniqueWords = {};
 		var wordLengths = {};
 		var sentenceLengths = {};
